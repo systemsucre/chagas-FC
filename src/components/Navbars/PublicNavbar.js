@@ -101,7 +101,7 @@ function PublicNavbar(props) {
                   <p className="d-lg-none">Inciar sesion</p>
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-navbar" right tag="ul">
-                  <Link to={LOCAL_URL + '/login'} className="nav-item" >     <NavLink tag="li">
+                  <Link to={ '/login'} className="nav-item" >     <NavLink tag="li">
                     Iniciar sesion
                   </NavLink>
                   </Link>

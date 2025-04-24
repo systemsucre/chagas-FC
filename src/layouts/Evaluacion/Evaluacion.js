@@ -106,7 +106,7 @@ function Evaluacion(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -122,7 +122,7 @@ function Evaluacion(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL + "/evaluacion/home"} replace />}
+                  element={<Navigate to={"/evaluacion/home"} replace />}
                 />
               </Routes>
               {

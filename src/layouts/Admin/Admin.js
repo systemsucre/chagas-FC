@@ -106,7 +106,8 @@ function Admin(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                // outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -122,7 +123,8 @@ function Admin(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/admin/hospitales"} replace />}
+                  element={<Navigate to={"/admin/hospitales"} replace />}
+                  // element={<Navigate to={LOCAL_URL+"/admin/hospitales"} replace />}
                 />
               </Routes>
               {

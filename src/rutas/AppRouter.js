@@ -240,65 +240,66 @@ export default function AppRouter() {
   const ruta1 = createBrowserRouter(
     [
       {
-        path: LOCAL_URL + '/*',
+        // path: LOCAL_URL + '/*',
+        path: '/*',
         element: <PublicRoute component={PublicNavbar} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/login",
+        path: "/login",
         // element: <JwtLogin />,
         element: <PublicRoute component={Login} />,
         errorElement: <E500 />,
       },
       {
-        path: LOCAL_URL + "/admin/georef",
+        path: "/admin/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/estadistica-departamental/georef",
+        path: "/estadistica-departamental/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/ee-2-jefe-municipal/georef",
+        path: "/ee-2-jefe-municipal/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/recepcion-ube/georef",
+        path:  "/recepcion-ube/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/tecnico/georef",
+        path:  "/tecnico/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
           },
           {
-              path: LOCAL_URL + "/evaluacion/georef",
+              path: "/evaluacion/georef",
               element: <Check component={MSDK} />,
               errorElement: <E500 />,
           },
       {
-        path: LOCAL_URL + "/tratamiento/georef",
+        path: "/tratamiento/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/reportes-tratamiento-depto/georef",
+        path: "/reportes-tratamiento-depto/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/laboratorio-diagnostico/georef",
+        path: "/laboratorio-diagnostico/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
@@ -306,60 +307,60 @@ export default function AppRouter() {
 
 
       {
-        path: LOCAL_URL + "/iec/georef",
+        path: "/iec/georef",
         element: <Check component={MSDK} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/admin/*",
+        path: "/admin/*",
         element: <Check component={AdminLayout} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/tecnico/*",
+        path:  "/tecnico/*",
         element: <Check component={Tecnico} />,
         errorElement: <E500 />,
           },
           {
-              path: LOCAL_URL + "/evaluacion/*",
+              path:  "/evaluacion/*",
               element: <Check component={Evaluacion}></Check>,
               errorElement: <E500 />
           },
       {
-        path: LOCAL_URL + "/ee-2-jefe-municipal/*",
+        path:  "/ee-2-jefe-municipal/*",
         element: <Check component={Encargado} />,
         errorElement: <E500 />,
       },
       {
-        path: LOCAL_URL + "/estadistica-departamental/*",
+        path:  "/estadistica-departamental/*",
         element: <Check component={Estadistica} />,
         errorElement: <E500 />,
       },
 
 
       {
-        path: LOCAL_URL + "/recepcion-ube/*",
+        path: "/recepcion-ube/*",
         element: <Check component={RecepcionUBE} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/tratamiento/*",
+        path:  "/tratamiento/*",
         element: <Check component={Tratamiento} />,
         errorElement: <E500 />,
       },
 
       {
-        path: LOCAL_URL + "/reportes-tratamiento-depto/*",
+        path: "/reportes-tratamiento-depto/*",
         element: <Check component={ReportesTratamientoDepto} />,
         errorElement: <E500 />,
       },
 
 
       {
-        path: LOCAL_URL + "/laboratorio-diagnostico/*",
+        path: "/laboratorio-diagnostico/*",
         element: <Check component={Laboratorio} />,
         errorElement: <E500 />,
       },
@@ -368,7 +369,7 @@ export default function AppRouter() {
 
 
       {
-        path: LOCAL_URL + "/iec/*",
+        path:  "/iec/*",
         element: <Check component={IEC} />,
         errorElement: <E500 />,
       },

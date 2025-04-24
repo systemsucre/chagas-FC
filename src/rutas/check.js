@@ -10,7 +10,8 @@ export default function Check({ component: Component, ...rest }) {
     // console.log('hola que tal')
 
     return (
-        auth.isLogged() ? <Component /> : window.location.href = LOCAL_URL + "/"
+        // auth.isLogged() ? <Component /> : window.location.href = LOCAL_URL + "/"
+        auth.isLogged() ? <Component /> : window.location.href =  "/"
     )
 
 }

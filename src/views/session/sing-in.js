@@ -60,10 +60,10 @@ function Login() {
           auth.login('ok')
           let url = null
           if (parseInt(json.data.rol) === 2) {
-            url = LOCAL_URL + "/consulta-externa"
+            url =  "/consulta-externa"
           }
           if (parseInt(json.data.rol) === 1) {
-            url = LOCAL_URL + "/dashboard"
+            url = "/dashboard"
           }
           window.location.href = url
           toast.success(json.data.msg)

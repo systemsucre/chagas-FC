@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem("tiempo");
         axios.post(URL + "/logout", { token: token });
         // return <Redirect to = '/' />
-        window.location.href = LOCAL_URL;
+        window.location.href = '/';
       }
     }
     check();
@@ -47,7 +47,8 @@ const AuthProvider = ({ children }) => {
       localStorage.removeItem("id-municipio");
       localStorage.removeItem("id-comunidad");
       axios.post(URL + "/logout", { token: token });
-      window.location.href = LOCAL_URL+"/";
+      window.location.href = "/";
+      // window.location.href = LOCAL_URL+"/";
     },
 
     login(ok) {

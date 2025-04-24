@@ -1,6 +1,6 @@
-const URL = 'https://www.programaetvs.info/server_chagas/'
-// const URL = 'https://chagas.alwaysdata.net/server_chagas/'
-const LOCAL_URL = "/chagas"
+// const URL = 'https://chagas1.alwaysdata.net/server_chagas/'
+const URL = 'http://localhost:3005/server_chagas/'
+// const LOCAL_URL = "/"
 
 const TIEMPO_INACTIVO = 60 // MINUTOS DE TOLERANCIA ANTESDE QUE EL USUARIO VUELVA A INTERACTUAR CON EL SISTEMA YA SEA MEDIANTE MUOSE O TECLADO
 const INPUT = {
@@ -36,5 +36,6 @@ const INPUT = {
     PDF: /.pdf/i,
 }
 export {
-    URL, LOCAL_URL, INPUT, TIEMPO_INACTIVO
+    // URL, LOCAL_URL, INPUT, TIEMPO_INACTIVO
+    URL, INPUT, TIEMPO_INACTIVO
 }

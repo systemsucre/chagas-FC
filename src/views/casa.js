@@ -183,11 +183,24 @@ function Casas() {
     }
   };
 
-
+  const vaciar = () => {
+    setModalInsertar(false)
+    setModalEditar(false)
+    setJefeFamilia({ campo: null, valido: null })
+    setVmIntra({ campo: null, valido: null })
+    setVmPeri({ campo: null, valido: null })
+    setCv({ campo: null, valido: null })
+    setNumHab({ campo: null, valido: null })
+    setNumHabitantes({ campo: null, valido: null })
+    setLatitud({ campo: null, valido: null })
+    setLongitud({ campo: null, valido: null })
+    setAltitud({ campo: null, valido: null })
+  }
   const insertar = async () => {
+    if (localStorage.getItem('numRol') != 40)
+      if (comunidad.valido === "true") toast.error('Seleccione la comunidad')
 
     if (
-      comunidad.valido === "true" &&
       longitud.valido === "true" &&
       latitud.valido === "true" &&
       altitud.valido === "true" &&
@@ -214,15 +227,27 @@ function Casas() {
 
         numero_control_vectorial: cv.campo,
         jefefamilia: jefeFamilia.campo
-      }, setModalInsertar, setEstadoEnvio, true)
+      }, setModalInsertar, setEstadoEnvio, false, vaciar)
       listar()
+      // setModalInsertar(false)
+      // setJefeFamilia({campo:null, valido:null})
+      // setVmIntra({campo:null, valido:null})
+      // setVmPeri({campo:null, valido:null})
+      // setLatitud({campo:null, valido:null})
+      // setLongitud({campo:null, valido:null})
+      // setAltitud({campo:null, valido:null})
+      // setCv({campo:null, valido:null})
+      // setNumHab({campo:null, valido:null})
+      // setNumHabitantes({campo:null, valido:null})
     } else toast.error("Formulario incompleto!");
   };
 
   const editar = async () => {
+    if (localStorage.getItem('numRol') != 40)
+      if (comunidad.valido === "true") toast.error('Seleccione la comunidad')
+
     if (
       id.valido === 'true' &&
-      comunidad.valido === "true" &&
       vmIntra.valido === "true" &&
       vmPeri.valido === "true" &&
       numHab.valido === "true" &&
@@ -239,8 +264,15 @@ function Casas() {
         numero_habitantes: numHabitantes.campo,
         numero_control_vectorial: cv.campo,
         jefefamilia: jefeFamilia.campo
-      }, setModalEditar)
+      }, setModalEditar, false, vaciar)
       listar()
+      // setModalEditar(false)
+      // setJefeFamilia({campo:null, valido:null})
+      // setVmIntra({campo:null, valido:null})
+      // setVmPeri({campo:null, valido:null})
+      // setCv({campo:null, valido:null})
+      // setNumHab({campo:null, valido:null})
+      // setNumHabitantes({campo:null, valido:null})
     } else toast.error("Formulario incompleto!");
   };
 
@@ -356,7 +388,7 @@ function Casas() {
                     <th >Jefe. Fam.</th>
                     <th >PUNTO GPS</th>
                     <th >VM-INTRA</th>
-                    <th >VM-PERI</th>{(parseInt(localStorage.getItem('numRol')) === 3 || parseInt(localStorage.getItem('numRol')) === 40)  &&
+                    <th >VM-PERI</th>{(parseInt(localStorage.getItem('numRol')) === 3 || parseInt(localStorage.getItem('numRol')) === 40) &&
                       <th className="text-center">MODIFICAR COORDENADA</th>}
                     <th className="text-center">CREACION</th>
                     {(localStorage.getItem('numRol') == 3) || localStorage.getItem('numRol') == 40 && <>
@@ -366,7 +398,7 @@ function Casas() {
                     }
                   </tr>
                 </thead>
-                <tbody> 
+                <tbody>
                   {lista.map(e => (
                     <tr key={e.id}>
                       <td>
@@ -400,10 +432,10 @@ function Casas() {
                           // localStorage.setItem('ALT', e.altitud)
                         }}><img src={logo} style={{ width: '30px', height: '30px', cursor: 'pointer' }} /></td>}
                       <td><div className="text-center tbl-name tbl-bold">{e.creacion}</div></td>
-                      {(parseInt(localStorage.getItem('numRol')) === 3 || parseInt(localStorage.getItem('numRol')) === 40)  && <>
+                      {(parseInt(localStorage.getItem('numRol')) === 3 || parseInt(localStorage.getItem('numRol')) === 40) && <>
                         <td className="text-center">
                           <div className="tbl-edit" onClick={() => {
-                            setModalEditar(true);
+                            setModalEditar(true); 
                             listarComunidad(e.idmunicipio)
 
                             setId({ campo: e.id, valido: 'true' })
@@ -625,7 +657,7 @@ function Casas() {
                   />
                 </Col>
               </Row>
-              <p style={{ fontWeight: 'bold' }}>Herramienta de validacion de geolocalización</p>
+              {/* <p style={{ fontWeight: 'bold' }}>Herramienta de validacion de geolocalización</p>
               <div style={{ height: '40vh', width: '100%' }}>
                 <div className="map-wrap">
                   <div className="geocoding">
@@ -635,7 +667,7 @@ function Casas() {
                   </div>
                   <div ref={mapContainer} className="map-validacion" />
                 </div>
-              </div>
+              </div> */}
             </Form>
 
           </ModalBody>

@@ -16,7 +16,8 @@ axios.interceptors.request.use(
         localStorage.removeItem("tiempo");
         localStorage.removeItem("numRol");
         axios.post(URL + "/logout", { token: token });
-        window.location.href = LOCAL_URL + "/";
+        // window.location.href = LOCAL_URL + "/";
+        window.location.href =  "/";
         return Promise.reject(error);
     }
 );
@@ -36,7 +37,7 @@ async function start(url, id = null, msg = null) {
             localStorage.removeItem("tiempo");
             localStorage.removeItem("numRol");
             axios.post(URL + "/logout", { token: token });
-            window.location.href = LOCAL_URL + "/";
+            window.location.href =  "/";
         }
         if (data.data.ok) return data.data.data
         else {
@@ -64,7 +65,7 @@ async function buscarDB(url, dato) {
             localStorage.removeItem("tiempo");
             localStorage.removeItem("numRol");
             axios.post(URL + "/logout", { token: token });
-            window.location.href = LOCAL_URL + "/";
+            window.location.href = "/";
         }
         if (data.data.ok) return data.data.data
         else {

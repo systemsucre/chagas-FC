@@ -107,7 +107,7 @@ function IEC(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -124,7 +124,7 @@ function IEC(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/iec/img"} replace />}
+                  element={<Navigate to={"/iec/img"} replace />}
                 />
               </Routes>
               {

@@ -106,7 +106,7 @@ function Estadistica(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -123,7 +123,7 @@ function Estadistica(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/estadistica-departamental/EE-2"} replace />}
+                  element={<Navigate to={"/estadistica-departamental/EE-2"} replace />}
                 />
               </Routes>
               {

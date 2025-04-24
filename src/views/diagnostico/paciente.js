@@ -345,7 +345,7 @@ export default function Paciente() {
                     <td>
                       <Link
                         className="btn-tbl-tratamiento  "
-                        to={LOCAL_URL + "/tratamiento/tratamiento/" + a.id}
+                        to={"/tratamiento/tratamiento/" + a.id}
                         onClick={() => {
                           localStorage.setItem('ci', a.ci || '-')
                           localStorage.setItem('nombrePaciente', a.nombre + ' ' + a.ap1 + ' ' + a.ap2)

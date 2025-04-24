@@ -107,7 +107,7 @@ function ReportesTratamientoDepto(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -124,7 +124,7 @@ function ReportesTratamientoDepto(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/reportes-tratamiento-depto/main"} replace />}
+                  element={<Navigate to={"/reportes-tratamiento-depto/main"} replace />}
                 />
               </Routes>
               {

@@ -146,7 +146,7 @@ function Sidebar(props) {
                     key={key}
                   >
                     <NavLink
-                      to={LOCAL_URL + prop.layout + prop.path}
+                      to={ prop.layout + prop.path}
                       className="nav-link"
                       onClick={props.toggleSidebar}
                     >

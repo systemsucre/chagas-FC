@@ -68,7 +68,7 @@ function Fotografias() {
                       </div>
 
                       <div className="col-4" style={{ display: 'flex', justifyContent: 'end' }}>
-                        <Link className='btn-new' pb={3} to={LOCAL_URL + '/login'} >
+                        <Link className='btn-new' pb={3} to={'/login'} >
                           {window.innerWidth < 768 ? 'ir a ETV' : 'Ir al sistema ETV'}
                         </Link >
                       </div>

@@ -107,7 +107,7 @@ function RecepcionUBE(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -124,7 +124,7 @@ function RecepcionUBE(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/recepcion-ube/formulario"} replace />}
+                  element={<Navigate to={"/recepcion-ube/formulario"} replace />}
                 />
               </Routes>
               {

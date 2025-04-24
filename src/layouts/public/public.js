@@ -107,7 +107,7 @@ function Admin(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "ETV",
                 imgSrc: logo,
               }}
@@ -123,7 +123,7 @@ function Admin(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL} replace />}
+                  element={<Navigate to={'/'} replace />}
                 />
               </Routes>
               {

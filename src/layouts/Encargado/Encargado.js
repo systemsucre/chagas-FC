@@ -106,7 +106,7 @@ function Encargado(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -123,7 +123,7 @@ function Encargado(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/ee-2-jefe-municipal/dashboard"} replace />}
+                  element={<Navigate to={"/ee-2-jefe-municipal/dashboard"} replace />}
                 />
               </Routes>
               {

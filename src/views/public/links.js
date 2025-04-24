@@ -39,7 +39,7 @@ function Links() {
 
                     <div className="row mb-4">
                         <div className="col-md-4" style={{ animation: 'fadeInLeft 0.8s ease-out' }}>
-                            <Link to={LOCAL_URL + '/videos'} style={{ textDecoration: 'none' }}>
+                            <Link to={'/videos'} style={{ textDecoration: 'none' }}>
 
                                 <div className="card h-100 p-2" style={{
                                     background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)',
@@ -69,7 +69,7 @@ function Links() {
                         </div>
 
                         <div className="col-md-4" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
-                            <Link to={LOCAL_URL + '/folletos'} style={{ textDecoration: 'none' }}>
+                            <Link to={'/folletos'} style={{ textDecoration: 'none' }}>
 
                                 <div className="card h-100 p-2" style={{
                                     background: 'linear-gradient(to bottom right, #ffffff, #f3e5f5)',
@@ -99,7 +99,7 @@ function Links() {
 
                         </div>
                         <div className="col-md-4" style={{ animation: 'fadeInRight 0.8s ease-out' }}>
-                            <Link to={LOCAL_URL + '/fotografias'} style={{ textDecoration: 'none' }}>
+                            <Link to={'/fotografias'} style={{ textDecoration: 'none' }}>
 
                                 <div className="card h-100 p-2" style={{
                                     background: 'linear-gradient(to bottom right, #ffffff, #e8f5e9)',

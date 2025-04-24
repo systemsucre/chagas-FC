@@ -91,7 +91,7 @@ function Laboratorio(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -108,7 +108,7 @@ function Laboratorio(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL+"/laboratorio/pacientes"} replace />}
+                  element={<Navigate to={"/laboratorio/pacientes"} replace />}
                 />
               </Routes>
               {

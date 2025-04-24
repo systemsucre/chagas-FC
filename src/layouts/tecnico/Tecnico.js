@@ -106,7 +106,7 @@ function Tecnico(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: LOCAL_URL,
+                outterLink: '',
                 text: "CHAGAS",
                 imgSrc: logo,
               }}
@@ -122,7 +122,7 @@ function Tecnico(props) {
                 {getRoutes(routes)}
                 <Route
                   path="/"
-                  element={<Navigate to={LOCAL_URL + "/tecnico/home"} replace />}
+                  element={<Navigate to={ "/tecnico/home"} replace />}
                 />
               </Routes>
               {

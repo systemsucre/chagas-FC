@@ -17,7 +17,7 @@ function E500() {
                         </div>
                         <div className="col-sm-6">
                             <ol className="breadcrumb float-sm-right">
-                                <li className="breadcrumb-item"><a href={LOCAL_URL + '/'}>INICIO</a></li>
+                                <li className="breadcrumb-item"><a href={'/'}>INICIO</a></li>
                                 <li className="breadcrumb-item active">404 Pagina no encontrado</li>
                             </ol>
                         </div>
@@ -34,7 +34,7 @@ function E500() {
 
                         <p>
                             Trabajaremos para solucionarlo de inmediato. Mientras tanto, puede
-                            <a href={LOCAL_URL + '/'}>volver a la pagina de inicio</a>.
+                            <a href={'/'}>volver a la pagina de inicio</a>.
                         </p>
 
                     </div>

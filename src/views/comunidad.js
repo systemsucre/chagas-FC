@@ -46,7 +46,7 @@ function Comunidad() {
 
 
   useEffect(() => {
-    document.title = "ESTABLECIMIENTOS";
+    document.title = "COMUNIDADES";
     setTimeout(async () => {
       if (inputBuscar.valido === null) listar()
 
@@ -202,6 +202,7 @@ function Comunidad() {
                       <td className="text-center">
                         <div className="tbl-edit" onClick={() => {
                           setModalEditar(true);
+                          listarHospital(e.idmunicipio)
                           setId({ campo: e.id, valido: 'true' })
                           setHospital({ campo: e.idhospital, valido: 'true' })
                           setMunicipio({ campo: e.idmunicipio, valido: 'true' })
@@ -225,7 +226,7 @@ function Comunidad() {
       <Modal isOpen={modalInsertar} toggle={toggle}>
         <Card>
           <ModalHeader toggle={toggle}>
-            Registrar Hospital
+            Registrar comunidad
           </ModalHeader>
           <ModalBody>
             <Form>
@@ -284,7 +285,7 @@ function Comunidad() {
       <Modal isOpen={modalEditar} toggle={toggleEdit}>
         <Card>
           <ModalHeader toggle={toggleEdit}>
-            Actualizar Hospital
+            Actualizar comunidad
           </ModalHeader>
           <ModalBody>
             <Select1

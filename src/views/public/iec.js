@@ -83,7 +83,7 @@ function IEC() {
 
                   </div>
                   <Link
-                    to={LOCAL_URL + '/login'}
+                    to={ '/login'}
                     className="btn btn-lg"
                     style={{
                       border: '2px solid #7f8c8d',

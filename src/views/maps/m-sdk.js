@@ -24,7 +24,7 @@ export default function MSDK() {
     const mapContainer = useRef(null);
     const map = useRef(null);
     const tokyo = { lng: -64.132544, lat: -20.218045, };
-    const zoom = 6;
+    const zoom = 7;
     const [mapController, setMapController] = useState();
     const [tipoDato, setTipoDato] = useState(localStorage.getItem('tipoDato') ? localStorage.getItem('tipoDato') : 1);
 
@@ -136,7 +136,7 @@ export default function MSDK() {
         <div  >
             <Nav tabs className='bg-info'>
                 <NavItem>
-                    <NavLink href={LOCAL_URL} >
+                    <NavLink href={'/'} >
                         Salir de mapa
                     </NavLink>
                 </NavItem>
